@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: v0.0.1
+        image: gazgeek/springboot-helloworld
         imagePullPolicy: Always
         ports:
-        - containerPort: 8085
+        - containerPort: 8080
           name: http
           protocol: TCP
 # service type loadbalancer       
@@ -36,7 +36,7 @@ spec:
   - name: http
     port: 80
     protocol: TCP
-    targetPort: 8085
+    targetPort: 8080
   type: LoadBalancer
   selector:
     app: springboot-app
