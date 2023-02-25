@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: backend-restapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: myapp
+      app: backend-restapp
   template:
     metadata:
       labels:
-        app: myapp
+        app: backend-restapp
     spec:
       containers:
-      - name: myapp
+      - name: backend-restapp
         image: stacksimplify/kube-helloworld:1.0.0
         resources:
           limits:
