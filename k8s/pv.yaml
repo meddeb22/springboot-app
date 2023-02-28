@@ -4,7 +4,7 @@ metadata:
   name: mypv
 spec:
   capacity:
-    storage: 100Mo
+    storage: 100èMo
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
