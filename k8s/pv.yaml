@@ -1,15 +1,14 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: pv
+  name: monpv
   labels:
     type: local
 spec:
   storageClassName: manual
   capacity:
-    storage: 100Mo
+    storage: 1Gi
   accessModes:
     - ReadWriteOnce
-  nfs:
-    path: /tmp
-    server: 172.17.0.2
+  hostPath:
+    path: "/tmp"
